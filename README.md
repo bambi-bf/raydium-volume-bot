@@ -60,8 +60,8 @@ LOG_LEVEL=info               # Logging level (info, debug, error)
 ## Usage
 1. Clone the repository
 ```
-git clone https://github.com/rabnail/volume-bot_raydium.git
-cd volume-bot_raydium
+git clone https://github.com/poseisol/raydium-volume-bot
+cd raydium-volume-bot
 ```
 2. Install dependencies
 ```
@@ -76,14 +76,3 @@ Rename the .env.copy file to .env and set RPC and WSS, main keypair's secret key
 ```
 npm start
 ```
-
-
-## Author
-
-Discord: rabnail_15 in discord
-
-Twitter: [@Rabnail](https://twitter.com/Rabnail_SOL)
-
-Telegram: [@Rabnail](https://t.me/rab_nail)
-
-You can always find me here, for help, or for other projects.
