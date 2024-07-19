@@ -1,7 +1,8 @@
 {
   "name": "volume-bot",
   "scripts": {
-    "start": "ts-node index.ts",
+    "start": "tsc && node dist/index.js",
+    "dev": "ts-node index.ts",
     "sell": "ts-node sell.ts",
     "tsc": "tsc --noEmit",
     "gather": "ts-node gather.ts",
