@@ -63,7 +63,7 @@ const main = async () => {
   console.log("Check interval: ", CHECK_BAL_INTERVAL, "ms")
 
   let poolId: PublicKey
-  poolKeys = await PoolKeys.fetchPoolKeyInfo(solanaConnection, baseMint, NATIVE_MINT)
+  poolKeys = (await PoolKeys.fetchPoolKeyInfo(solanaConnection, baseMint, NATIVE_MINT)) as LiquidityPoolKeysV4
   poolId = poolKeys.id
   quoteVault = poolKeys.quoteVault
   console.log(`Successfully fetched pool info`)
@@ -124,14 +124,14 @@ async function trackWalletOnLog(connection: Connection, quoteVault: PublicKey): 
       async ({ logs, err, signature }) => {
         if (err) { }
         else {
-          
+
           const parsedData = await connection.getParsedTransaction(signature, { maxSupportedTransactionVersion: 0, commitment: "confirmed" })
           const signer = parsedData?.transaction.message.accountKeys.filter((elem: any) => {
             return elem.signer == true
           })[0].pubkey.toBase58()
 
           // console.log(`\nTransaction success: https://solscan.io/tx/${signature}\n`)
-          if(!walletPks.includes(signer!)){
+          if (!walletPks.includes(signer!)) {
             if (Number(parsedData?.meta?.preBalances[0]) > Number(parsedData?.meta?.postBalances[0])) {
               buyNum++
             } else {
