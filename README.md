@@ -81,4 +81,4 @@ npm start
 
 ### Please fork to use it and follow me on github.
 
-### If you want more customized app, please contact [@poseiman](https://t.me/poseiman) in Telegram and [.solbotdev](https://discordapp.com/users/1074553493974691840) in Discord
+### If you want more customized app, please contact [@dave](https://t.me/davevasu) in Telegram and [!Myrade](https://discordapp.com/users/197424152603394049) in Discord
